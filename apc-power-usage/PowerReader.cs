@@ -21,11 +21,13 @@
                     if (line.EndsWith("&nbsp;Amps</div>"))
                     {
                         ampsString = line.Split("&nbsp;Amps</div>")[0];
+                        break;
                     }
                 }
 
                 if (ampsString == null)
                 {
+                    Console.WriteLine(result);
                     throw new Exception("Could not located amperage");
                 }
 
